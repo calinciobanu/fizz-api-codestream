@@ -26,6 +26,7 @@ class WidgetService:
             return []
         db.session.delete(widget)
         db.session.commit()
+        # test comment - resolved bug
         return [widget_id]
 
     @staticmethod
