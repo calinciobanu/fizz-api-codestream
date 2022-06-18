@@ -45,8 +45,8 @@ class TestWidgetResource:
     )
     def test_post(self, client: FlaskClient):  # noqa
         with client:
-
-            payload = dict(name="Test widget", purpose="Test purpose")
+            # change the widget name
+            payload = dict(name="Test widget 2", purpose="Test purpose")
             result = client.post(f"/api/{BASE_ROUTE}/", json=payload).get_json()
             expected = (
                 WidgetSchema()
